@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-&zmx+*oq0e_buh0f1^2br(z0283h-h80u^)gk5l$s9lmsnvb5q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['qldb.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -52,6 +52,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
